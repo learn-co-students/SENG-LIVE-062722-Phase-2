@@ -21,11 +21,14 @@
 
 #### 2. Create a `header` component that:
 
-- Renders the text `Header`
+- Renders the text `Project Showcase`
+- Renders a Dark Mode button
 
 #### 3. Create a `ProjectForm` component that:
 
-- Renders the text `ProjectForm`
+- Renders an h3 with text `Add New Project`
+- Renders labels an inputs for `name` and about`
+- Renders a submit button with text Add Project
 
 #### 4. Define a `ProjectList` component that:
 
