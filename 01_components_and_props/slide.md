@@ -174,3 +174,9 @@ function Card(props) {
 <h2> Wireframes </h2>
 
 <img src="https://res.cloudinary.com/dnocv6uwb/image/upload/v1643721399/wireframe_bfc35e.png">
+
+<!-- slide -->
+
+<h2> What we're working towards </h2>
+
+<img src="assets/projectshowcasefinal.png">
