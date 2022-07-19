@@ -9,40 +9,56 @@ presentation:
 
 <h2><strong> ✅ Objectives </strong></h2>
 
-- Add event handlers to elements in React
+- Explain the importance of state
+- Explain the difference between state and props
+- Observe how to use the useState hook
+- Observe how to use DOM events in React
 
-- Use the useState hook to create state variables
+<!-- slide style="text-align: left;"-->
 
-- Create event handler callbacks that manipulate state
-
-- Trigger re-renders by setting state
-
-- Distinguish between props and state
-
-<!-- slide style="text-align: left;" -->
-
-<h2 style="text-align: center;"><strong>Handling events in vanilla JS</strong></h2>
+<h2 style="text-align: center;"><strong>Why is state important?</strong></h2>
 
 <br>
 
-In vanilla JS, our steps for handling events looked like this:
+🏹 State is used to track information that changes over time. 
 
 <br>
 
-```js
-// 1. find a piece of DOM:
-const pizza = document.getElementById("pizza");
-// 2. Add an event listener to that piece
-pizza.addEventListener;
-// 3. Give type and callback to the event listener:
-pizza.addEventListener("click", () => {
-  console.log("It's Pizza Time!");
-});
-```
+🏹 Props are passed from the parent component, state is internal to a component. 
 
 <br>
 
-In React, we don't have to do step 1, we can skip directly to step 2 by adding event handlers directly to our JSX. We still must supply the event handler with a callback.
+🏹 Values stored in state are meant to change, especially in response to user behaviors (as the user interacts with the DOM and triggers events).
+
+<br>
+
+🏹 We can do conditional rendering based on state values. This is a key component of declarative programming in React: we tie our components to our state by integrating state values into our JSX rendering logic. This way, changes in state eventually cause changes to the DOM (Updating the Dark Mode button!).
+
+
+
+<!-- slide -->
+
+## React Flow
+
+<img height="600px" alt="Data Display Behavior" src="./assets/data-display-behavior.drawio.svg" />
+
+🔑 We use state to store data that may change in response to user behavior
+
+<br>
+
+🏹 To work with state in a functional component, we use the `useState` hook
+
+<!-- slide -->
+
+## Local Variables vs State Variables - What's the difference?
+
+<iframe src="https://codesandbox.io/embed/counter-state-example-0r8stb?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:900px; border:0; border-radius: 4px; overflow:hidden;"
+  title="counter-state-example"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
 
 <!-- slide style="text-align: left;"-->
 
@@ -58,11 +74,15 @@ const Counter = () => {
 
 <br>
 
-<strong>NOTE:</strong> Events can only be attached to DOM elements, we can't attach event listeners to our components
+<strong>NOTE:</strong> Events can only be attached to DOM elements, we can't attach event listeners directly to our components
 
 <br>
 
-We can also create a helper function for the callback
+<!-- slide -->
+
+## Defining Event Handlers
+
+We can also define event handler functions within our components and pass the function reference to our event listener in the JSX.
 
 <br>
 
@@ -119,83 +139,29 @@ We can also also refactor using a helper function:
 
 💡 We need to now figure out how to properly set new text for the button and perform DOM manipulation to reflect the change. That is where `state` will come in.
 
-<!-- slide style="text-align: left;"-->
 
-<h2 style="text-align: center;"><strong>Why is state important?</strong></h2>
+<!-- slide -->
 
-<br>
+## Passing State as Props
 
-🏹 State is used for data that needs to be dynamic. Where props are passed down from parents to children and are static, values stored in state are meant to change, especially as the user interacts with the DOM.
+<iframe src="https://codesandbox.io/embed/vigilant-minsky-iiykrb?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:900px; border:0; border-radius: 4px; overflow:hidden;"
+  title="vigilant-minsky-iiykrb"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-<br>
+<!-- slide -->
 
-🏹 This is a key component of declarative programming in React: we tie our components to our state by integrating values in state into logic (e.g. conditional rendering). This way, changes in state eventually cause changes to the DOM.
+<img src="assets/component-lifecycle.drawio.svg" alt="Component Lifecycle" width="1200" />
 
-<br>
+<!-- slide -->
 
-🏹 To work with state in a function component, we use the `useState` hook
+<img height="600px" alt="Data Display Behavior" src="./assets/data-display-behavior.drawio.svg" />
 
-<!-- slide style="text-align: left;"-->
+<!-- slide -->
 
-<h2 style="text-align: center;"> The useState hook </h2>
-
-<br>
-
-`useState` will return an array of two elements:
-
-- state variable: returns the current value for the state
-
-- setterFunc: a function that will update the value of the state when invoked
-
-<br>
-
-React recommends using [array destructuring]:
-
-```js
-const [stateVariable, setterFunc] = useState(someVal);
-```
-
-<!-- slide style="text-align: left;"-->
-
-<h2 style="text-align: center;"> Adding state to Header component </h2>
-
-<br>
-<br>
-
-```js
-const [isDarkMode, setIsDarkMode] = useState(true);
-```
-
-<br>
-
-This creates a variable `isDarkMode` that will return `true` initially until it gets updated to a new value
-
-<!-- slide style="text-align: left;"-->
-
-<h2 style="text-align: center;"> Updating State </h2>
-
-<br>
-
-To update a state variable, we use its setter function:
-
-<br>
-
-```js
-const handleClick = () => setIsDarkMode(!isDarkMode);
-```
-
-<br>
-<br>
-
-🛑 Calling the setter function does two things:
-
-1. It updates the state variable to some new value
-
-2. It causes our component to re-render and update the DOM
-
-<br>
-
-Now when we click the button, the state will toggle to the negated version of itself due to the `!` operator.
+## ☕️ Break!!! ☕️
 
 <!-- slide style="text-align: left;"-->
 
@@ -206,14 +172,19 @@ Now when we click the button, the state will toggle to the negated version of it
 Currently, we are creating a `ProjectListItem` component for each project inside of the `projects` array:
 
 ```js
-const projectListItems = projects.map((project) => (
-  <ProjectListItem key={project.id} {...project} />
-));
+const renderProjects = (projects) => {
+  return projects.map(project => (
+    <ProjectListItem
+      key={project.id}
+      project={project}
+    />
+  ))
+}
 ```
 
 <br>
 
-We need to make this dynamic by implementing a filter feature that returns the projects based on the users entry in the `search input`
+We need to make this dynamic by implementing a filter feature that returns the projects based on the user's entry in the `search input`
 
 ```js
 <input type="text" placeholder="Search..." />
@@ -267,12 +238,10 @@ const searchResults = projects.filter((project) =>
 
 <br>
 
-5. Update `projectListItems` to use `searchResults`:
+5. Pass `searchResults` to `renderProjects`:
 
 ```js
-const projectListItems = searchResults.map((project) => (
-  <ProjectListItem key={project.id} {...project} />
-));
+<ul className="cards">{renderProjects(searchResults)}</ul>
 ```
 
 <br>

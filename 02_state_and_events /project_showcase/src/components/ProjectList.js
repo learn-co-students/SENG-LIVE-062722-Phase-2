@@ -2,9 +2,14 @@ import ProjectListItem from "./ProjectListItem";
 
 const ProjectList = ({ projects }) => {
 
-  const projectListItems = projects.map((project) => (
-    <ProjectListItem key={project.id} {...project} />
-  ));
+  const renderProjects = (projects) => {
+    return projects.map(project => (
+      <ProjectListItem
+        key={project.id}
+        project={project}
+      />
+    ))
+  }
 
 
   return (
@@ -21,7 +26,7 @@ const ProjectList = ({ projects }) => {
       </div>
       <input type="text" placeholder="Search..."/>
 
-      <ul className="cards">{projectListItems}</ul>
+      <ul className="cards">{renderProjects(projects)}</ul>
     </section>
   );
 };
