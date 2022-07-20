@@ -1,18 +1,16 @@
-import { useState } from "react";
-
-const ProjectListItem = ({ id, about, image, link, name, phase }) => {
-
-  const [clapCount, setClapCount] = useState(0);
-
-  const handleClap = () => setClapCount(clapCount + 1);
-
+const ProjectListItem = ({
+  image,
+  name,
+  about,
+  link,
+  phase
+}) => {
+  
   return (
     <li className="card">
       <figure className="image">
         <img src={image} alt={name} />
-        <button className="claps" onClick={handleClap}>
-          👏{clapCount}
-        </button>
+        <button className="claps">👏{0}</button>
       </figure>
 
       <section className="details">
@@ -30,6 +28,6 @@ const ProjectListItem = ({ id, about, image, link, name, phase }) => {
       </footer>
     </li>
   );
-}
+};
 
 export default ProjectListItem;

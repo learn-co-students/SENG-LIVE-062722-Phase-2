@@ -17,11 +17,11 @@ https://labs.tadigital.com/index.php/2020/03/31/unidirectional-data-flow-in-reac
 
 <h2><strong> ✅ Objectives </strong></h2>
 
-- Revisit our component hierarchy and describe the Flow of Information
-
-- Decide which components should have state
-
-- Pass data up with callbacks, and down with props
+- Define the term “lifting state”
+- Recognize the pattern for changing state in a parent component from a child component
+- Explain the role that callback functions play in changing parent state
+- Observe how we can render reusable components that invoke different callback functions after an event
+- Recognize destructured props and how to work with them
 
 <!-- slide style="text-align: left;" -->
 
@@ -41,7 +41,7 @@ https://reactjs.org/docs/lifting-state-up.html
 
 <br>
 
-From Step 4 of Thinking in React: To decide where state should live, for each piece of state in your application:
+From [Step 4 of Thinking in React](https://reactwithhooks.netlify.app/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live): To decide where state should live, for each piece of state in your application:
 
 - Identify every component that renders something based on that state.
 
@@ -57,9 +57,9 @@ From Step 4 of Thinking in React: To decide where state should live, for each pi
 
 <br>
 
-<center><img  src="https://res.cloudinary.com/dnocv6uwb/image/upload/v1643912910/component-hierarchy-with-data-flow_cq3qkl.png" alt="Component Hierarchy" height="700" width="1500"></center>
+<center><img  src="assets/component-hierarchy-with-data-flow.drawio.svg" alt="Component Hierarchy" height="700" width="1500"></center>
 
-💡 Question: Where else do we need access to projects?
+💡 Question: Why have projects in state at the App component level? Why not store projects as state in ProjectList?
 
 <!-- slide style="text-align: left;" -->
 
@@ -131,8 +131,8 @@ Third, pass both `isDarkMode` and `onToggleDarkMode` to `Header` as props
 Destructure the props in the argument and use the variables to render the button text and as a callback for the `onClick` event:
 
 ```js
-const Header = ({ isDarkMode, onToggleDarkMode }) => {
-  const handleClick = () => onToggleDarkMode();
+const Header = ({ isDarkMode, handleToggleDarkMode }) => {
+  const handleClick = () => handleToggleDarkMode();
 
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
 
