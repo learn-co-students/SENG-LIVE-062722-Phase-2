@@ -69,7 +69,22 @@ From [Step 4 of Thinking in React](https://reactwithhooks.netlify.app/docs/think
 
 - Currently, we have our isDarkMode state within the Header component.
 
-- What's the problem with that? If we want to update the style of the entire application as it changes, we will only cause a re-render to `Header` component and its children
+- What's the problem with that? 
+
+<details>
+  <summary>
+    Reveal
+  </summary>
+  <hr/>
+
+  If we want to update the style of the entire application as it changes, we will only cause a re-render to `Header` component and its children. We won't be able to switch the entire app into dark mode
+
+  <hr/>
+
+</details>
+<br/>
+
+
 
 <!-- slide style="text-align: left;" -->
 
