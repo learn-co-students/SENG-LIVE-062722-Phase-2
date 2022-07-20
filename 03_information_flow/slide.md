@@ -146,8 +146,8 @@ Third, pass both `isDarkMode` and `onToggleDarkMode` to `Header` as props
 Destructure the props in the argument and use the variables to render the button text and as a callback for the `onClick` event:
 
 ```js
-const Header = ({ isDarkMode, handleToggleDarkMode }) => {
-  const handleClick = () => handleToggleDarkMode();
+const Header = ({ isDarkMode, onToggleDarkMode }) => {
+  const handleToggleDarkModeClick = (e) => handleToggleDarkMode();
 
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
 
@@ -157,7 +157,7 @@ const Header = ({ isDarkMode, handleToggleDarkMode }) => {
         <span className="logo">{"//"}</span>
         Project Showcase
       </h1>
-      <button onClick={handleClick}>{buttonTextContent}</button>
+      <button onClick={handleToggleDarkModeClick}>{buttonTextContent}</button>
     </header>
   );
 };

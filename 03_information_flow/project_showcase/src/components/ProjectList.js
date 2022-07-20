@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ProjectListItem from "./ProjectListItem";
 
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ projects, loadProjects }) => {
 
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -39,6 +39,7 @@ const ProjectList = ({ projects }) => {
         placeholder="Search..."
         onChange={handleSearch}
       />
+      <button onClick={(e) => loadProjects() }>Reload</button>
 
       <ul className="cards">{renderProjects(searchResults)}</ul>
     </section>
