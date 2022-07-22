@@ -13,11 +13,10 @@ presentation:
 
 <h2><strong> ✅ Objectives </strong></h2>
 
-- Explain why we use controlled forms (vs uncontrolled forms)
-
-- Implement a controlled form
-
-- Use form data to update state in a parent component
+- Explain the difference between a controlled and uncontrolled input
+- Explain why controlled inputs are preferred by the React community
+- Review how to use callback functions with events in React
+- Review how to change parent state from a child component
 
 <!-- slide style="text-align: left;" -->
 
@@ -41,9 +40,16 @@ To keep track of each input's value, you need:
 
 2. An `onChange` listener attached to the input to monitor users behavior and update state as the user interacts with the field
 
-3. A `value` attribute on the input that corresponds to a key in state
+3. A `value` attribute on the input that corresponds to that piece of state
 
-And for the form itself, you need an `onSubmit` listener on the form to finally submit data.
+Form components also need an `onSubmit` listener on the form element to handle the submitted form data.
+
+<!-- slide -->
+
+## Examples
+
+- [A Form with individual pieces of state per input](https://codesandbox.io/s/controlled-form-with-individual-pieces-of-state-pbjpe4?from-embed)
+- [Refactor to formState as an object](https://codesandbox.io/s/refactoring-a-controlled-form-with-individual-pieces-of-state-juv663?file=/src/App.js)
 
 <!-- slide style="text-align: left;" -->
 
@@ -63,9 +69,7 @@ const [link, setLink] = useState("");
 const [image, setImage] = useState("");
 ```
 
-<br>
-
-❗ Most common approach (and cleanest) is to create a state object with key/value pairs associated with each form field:
+A more elegant approach is to create a state object with key/value pairs associated with each form field:
 
 ```js
 const [formData, setFormData] = useState({
@@ -77,9 +81,33 @@ const [formData, setFormData] = useState({
 });
 ```
 
+Note: The above works well for a form that has multiple string/number/textarea/select inputs but gets a bit clunkier when the form includes inputs like checkboxes or files. [React docs](https://reactwithhooks.netlify.app/docs/forms.html) recommend an external library like [Formik](https://formik.org/) as a complete solution for forms.
+
 <!-- slide style="text-align: left;" -->
 
-2. Add an onChange handler for each input field using a helper function:
+2. Connect the `value` attribute of each input field to the corresponding state variable:
+
+<br>
+<br>
+
+Example:
+
+```js
+<input
+  type="text"
+  id="name"
+  value={formData.name}
+/>
+```
+
+<br>
+<br>
+
+❗<strong>Note:</strong> The reason `formData.name` is being used is because the state variable is an object named `formData`. To access the value of a key within the object, dot notation is used.
+
+<!-- slide style="text-align: left;" -->
+
+3. Add an onChange listener for each input field using a helper function:
 
 <br>
 <br>
@@ -97,37 +125,14 @@ Example:
 Example:
 
 ```js
-<input type="text" id="about" onChange={handleAbout} />
+<input type="text" id="about" onChange={handleAboutChange} />
 ```
 
 <br>
 
 ```js
-<input type="text" id="phase" onChange={handlePhase} />
+<input type="text" id="phase" onChange={handlePhaseChange} />
 ```
-
-<!-- slide style="text-align: left;" -->
-
-3. Connect the `value` attribute of each input field to the corresponding state variable:
-
-<br>
-<br>
-
-Example:
-
-```js
-<input
-  type="text"
-  id="about"
-  onChange={handleOnChange}
-  value={formData.about}
-/>
-```
-
-<br>
-<br>
-
-❗<strong>Note:</strong> The reason `formData.name` is being used is because the state variable is an object named `formData`. To access the value of a key within the object, dot notation is used.
 
 <!-- slide style="text-align: left;" -->
 
@@ -139,17 +144,17 @@ Example:
 ```js
 <input
   type="text"
-  id="about"
+  id="link"
   onChange={handleOnChange}
-  value={formData.about}
-  name="about"
+  value={formData.link}
+  name="link"
 />
 ```
 
 <br>
 <br>
 
-❗ <strong>IMPORTANT: </strong> The `name` attribute needs to match with the key created in the state object in order to update the value. If the key in the state object is 'about' then the `name` attribute for the corresponding input field should be `about` as well
+❗ <strong>IMPORTANT: </strong> The `name` attribute needs to match with the key created in the state object in order to update the value. If the key in the state object is 'link' then the `name` attribute for the corresponding input field should be `link` as well
 
 <!-- slide style="text-align: left;" -->
 
@@ -262,5 +267,8 @@ const handleSubmit = (e) => {
 
 <br>
 
-State is a very integral part of the way that React applications operate and DOM manipulation to occur. React prefers using state to update the forms and keep track of the form fields values, making them controlled inputs. What our user sees in the input fields reflects the value of the state associated with that field. 
+- State is a very integral part of the way that React applications render and manipulate the DOM. 
+- React prefers using state to update the forms and keep track of the form fields values, making them controlled inputs, rather than letting form inputs manage their own internal state (through their value). 
+- What our user sees in the input fields reflects the value of the state associated with that field. 
+- Example: Doing this allows us to make an edit form populated with a project's previously saved values for the inputs by setting the formState to match the saved record.
 
