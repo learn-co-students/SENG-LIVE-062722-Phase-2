@@ -24,7 +24,18 @@ const ProjectForm = ({ onAddProject }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    onAddProject(formData);
+    fetch("http://localhost:4000/projects", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((response) => response.json())
+      .then((newProject) => {
+        console.log(newProject)
+        onAddProject(newProject);
+      });
     setFormData(initialFormState);
   }
 
@@ -58,11 +69,11 @@ const ProjectForm = ({ onAddProject }) => {
           onChange={handleOnChange}
         >
           <option>Select One</option>
-          <option value="1">Phase 1</option>
-          <option value="2">Phase 2</option>
-          <option value="3">Phase 3</option>
-          <option value="4">Phase 4</option>
-          <option value="5">Phase 5</option>
+          <option value={1}>Phase 1</option>
+          <option value={2}>Phase 2</option>
+          <option value={3}>Phase 3</option>
+          <option value={4}>Phase 4</option>
+          <option value={5}>Phase 5</option>
         </select>
 
         <label htmlFor="link">Project Homepage</label>
