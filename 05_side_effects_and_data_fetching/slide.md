@@ -282,3 +282,7 @@ The solution
 - useEffect with an empty dependency array is your go to tool for fetching data when a component first loads
 
 <br>
+
+<!-- slide -->
+
+<img src="assets/component-lifecycle.drawio.svg" width="1500" height="900"/>

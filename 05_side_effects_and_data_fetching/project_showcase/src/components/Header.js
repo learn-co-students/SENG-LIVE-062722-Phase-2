@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
   const handleClick = () => onToggleDarkMode();
