@@ -183,6 +183,7 @@ working with `useEffect` to refer to when you're ready:
 - The [useEffect docs](https://reactjs.org/docs/hooks-effect.html) and
   [useEffect reference](https://reactjs.org/docs/hooks-reference.html#useeffect)
   on the React docs are a great place to start!
+- [The last guide to the useEffect Hook you’ll ever need](https://blog.logrocket.com/guide-to-react-useeffect-hook/): A great post from the logrocket blog with examples of different use cases.
 - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/):
   very in-depth blog by Dan Abramov, really great at building a good mental
   model of how `useEffect` works
@@ -190,3 +191,5 @@ working with `useEffect` to refer to when you're ready:
   Kent C Dodds about the right and wrong way to think about the `useEffect` hook
 - [How to Fetch Data with useEffect](https://www.robinwieruch.de/react-hooks-fetch-data):
   In depth article about making fetch requests in React
+- [Using D3.js with React.js](https://blog.griddynamics.com/using-d3-js-with-react-js-an-8-step-comprehensive-manual/): An example of how to integrate a 3rd party library for data visualization (D3.js) utilizing the useEffect hook.
+
