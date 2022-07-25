@@ -1,14 +1,15 @@
 import ProjectListItem from "./ProjectListItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ProjectList = ({ projects, enterProjectEditModeFor }) => {
-  const [searchQuery, setSearchQuery] = useState("");
+const ProjectList = ({
+  projects,
+  enterProjectEditModeFor,
+  setSelectedPhase,
+  setSearchQuery
+}) => {
+  const [searchInputText, setSearchInputText] = useState("");
 
-  const searchResults = projects.filter((project) => {
-    return project.name.toLowerCase().includes(searchQuery.toLowerCase());
-  });
-
-  const projectItems = searchResults.map((project) => {
+  const projectItems = projects.map((project) => {
     return (
       <ProjectListItem
         key={project.id}
@@ -18,19 +19,29 @@ const ProjectList = ({ projects, enterProjectEditModeFor }) => {
     );
   });
 
-  const handleOnChange = (e) => setSearchQuery(e.target.value);
+  const handleOnChange = (e) => setSearchInputText(e.target.value);
+
+  useEffect(() => {
+    const scheduledUpdate = setTimeout(() => {
+      setSearchQuery(searchInputText);
+    }, 300)
+    
+    return () => {
+      clearTimeout(scheduledUpdate);
+    }
+  }, [setSearchQuery, searchInputText])
 
   return (
     <section>
       <h2>Projects</h2>
 
       <div className="filter">
-        <button>All</button>
-        <button>Phase 5</button>
-        <button>Phase 4</button>
-        <button>Phase 3</button>
-        <button>Phase 2</button>
-        <button>Phase 1</button>
+        <button onClick={() => setSelectedPhase("")}>All</button>
+        <button onClick={() => setSelectedPhase("5")}>Phase 5</button>
+        <button onClick={() => setSelectedPhase("4")}>Phase 4</button>
+        <button onClick={() => setSelectedPhase("3")}>Phase 3</button>
+        <button onClick={() => setSelectedPhase("2")}>Phase 2</button>
+        <button onClick={() => setSelectedPhase("1")}>Phase 1</button>
       </div>
       <input type="text" placeholder="Search..." onChange={handleOnChange} />
 

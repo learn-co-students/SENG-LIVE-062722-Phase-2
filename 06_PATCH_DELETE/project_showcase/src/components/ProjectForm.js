@@ -1,13 +1,13 @@
 import { useState } from "react";
 
+const initialState = {
+  name: "",
+  about: "",
+  phase: "",
+  link: "",
+  image: "",
+};
 const ProjectForm = ({ onAddProject }) => {
-  const initialState = {
-    name: "",
-    about: "",
-    phase: "",
-    link: "",
-    image: "",
-  };
   const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
@@ -17,27 +17,20 @@ const ProjectForm = ({ onAddProject }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const configObj = {
-      method: "POST",
+    fetch("http://localhost:4000/projects", {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ ...formData, claps: 0 }),
-    };
-
-    fetch("http://localhost:4000/projects", configObj)
-      .then((resp) => resp.json())
-      .then((project) => {
-        onAddProject(project);
-        setFormData({
-          name: "",
-          about: "",
-          phase: "",
-          link: "",
-          image: "",
-        });
+      body: JSON.stringify({ ...formData, claps: 0 })
+    })
+      .then((response) => response.json())
+      .then((newProject) => {
+        console.log(newProject)
+        onAddProject(newProject);
       });
+    setFormData(initialState);
+
   };
 
   return (
