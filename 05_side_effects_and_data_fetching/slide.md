@@ -245,6 +245,30 @@ The solution
   - when that piece of state changes, schedule a change to the state variable that will trigger the fetch request for 300 milliseconds in the future
   - cancel the previously scheduled update to that state variable 
 
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-1.drawio.svg" width="1500" height="900"/>
+
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-2.drawio.svg" width="1500" height="900"/>
+
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-3.drawio.svg" width="1500" height="900"/>
+
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-4.drawio.svg" width="1500" height="900"/>
+
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-5.drawio.svg" width="1500" height="900"/>
+
+<!-- slide -->
+
+<img src="assets/cleanup-diagram-6.drawio.svg" width="1500" height="900"/>
+
 <!-- slide style="text-align: left;" -->
 
 <h2 style="text-align: center;"><strong> 💡 Conclusion </strong></h2>
