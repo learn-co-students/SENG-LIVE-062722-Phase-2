@@ -70,7 +70,7 @@ button:focus,
 button:hover {
   outline: none;
   color: var(--white);
-  background-color: var(--primary);
+  background-color: var(--blue);
   border: 2px solid var(--primary);
 }
 

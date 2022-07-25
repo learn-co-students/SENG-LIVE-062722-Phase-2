@@ -13,9 +13,32 @@ presentation:
 
 <h2><strong> ✅ Objectives </strong></h2>
 
-- Use the useEffect hook to fetch data
+- Observe how to send a POST request via form
+- Explain what a side effect is
+- Observe how React manages side effects with the useEffect hook
+- Observe how to use the useEffect hook to fetch data on page load
+- Review changing parent state
 
-- Understanding component side effects
+<!-- slide -->
+
+## Project Showcase Features
+
+- Load all projects from db on component load
+- Load all phase 4 projects from db when users click on the phase 4 button
+- Load all matching projects from db by phase and value in the search input
+
+<!-- slide style="text-align: left;" -->
+
+## Warmup
+
+Let's head over to `src/components/ProjectForm.js` and add in persistence.
+
+### Logistics:
+- `cd 05_side_effects_and_data_fetching/project_showcase`
+- `npm run server`
+- in another terminal: `npm install` then `npm start`
+
+We want to be able to submit the form to create a new project, see the project appear in the DOM, reload the page and see it still appearing on the page!
 
 <!-- slide style="text-align: left;" -->
 
@@ -23,7 +46,7 @@ presentation:
 
 <br>
 
-React components are 'pure functions'. This means that given an input(such as a prop), the return is 100% predictable
+The React components we've seen so far are 'pure functions'. This means that given an input(such as a props and state), the return is 100% predictable.
 
 <br>
 
@@ -77,13 +100,20 @@ The term 'side effect' not only applies to React but to all functional programmi
 
 - Utilizing interval timers such as `setInterval` or `setTimeout`
 
+<!-- slide -->
+
+<p style="font-size: 2em">What useEffect Does</p>
+
+- Synchronizes a side effect with a react component's rendering.
+
 <!-- slide style="text-align: left;" -->
 
 <h2 style="text-align: center;"><strong> 🛠️ useEffect() hook </strong></h2>
 
 <br>
 
-- `useEffect()` runs both upon the first render and then with every re-render after but only based on the rules set inside the dependency array
+- `useEffect()` runs both upon the first render (afterwards) and then with every subsequent re-render. 
+- we can limit when the effect will run again by specifying the values for props, state, etc. on which this effect depends
 
 <br>
 
@@ -155,59 +185,6 @@ useEffect(() => {
 
 - That means that the side effect will run once upon the components initial render and then only re-run when the value of the provided data changes
 
-<!-- slide style="text-align: left;" -->
-
-<h2 style="text-align: center;"><strong> Fixing App component with useEffect</strong></h2>
-
-<br>
-
-🛑 Current problem: To load all the projects into the Project showcase application, a user must click on the 'load projects' button
-
-<br>
-
-👍 Solution: Perform a side effect that will fetch the projects from the API and set the `projects` state to the response from the request
-
-<br>
-
-```js
-useEffect(() => {
-  fetch("http://localhost:4000/projects")
-    .then((res) => res.json())
-    .then((projects) => setProjects(projects));
-}, []);
-```
-
-<!-- slide style="text-align: left;" -->
-
-<h2 style="text-align: center;"><strong> 🔺 Common Mistakes with useEffect </strong></h2>
-
-<br>
-
-❗ Why are we not including `projects` like:
-
-What happens here?
-
-<br>
-
-```js
-useEffect(() => {
-  fetch("http://localhost:4000/projects")
-    .then((res) => res.json())
-    .then((projects) => setProjects(projects));
-}, [projects]);
-```
-
-<br>
-
-❓or here?
-
-```js
-useEffect(() => {
-  fetch("http://localhost:4000/projects")
-    .then((res) => res.json())
-    .then((projects) => setProjects(projects));
-};
-```
 
 <!-- slide style="text-align: left;" -->
 
@@ -238,11 +215,11 @@ const Timer = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let timer = setTimeout(() => {
+    let timer = setInterval(() => {
       setCount((count) => count + 1);
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, []);
 
   return <h1>I've rendered {count} times!</h1>;
@@ -251,7 +228,22 @@ const Timer = () => {
 
 <br>
 
-When the component unmounts from the DOM or mounts for the first time, it is ensured that the timeout has been cleared
+When the component unmounts from the DOM, it is ensured that the interval has been cleared and we won't attempt to update a state variable for an unmounted component.
+
+[Codesandbox example](https://codesandbox.io/s/useeffect-cleanup-ig17kd?file=/src/Timer.js)
+
+<!-- slide -->
+
+## Debouncing
+
+The problem:
+- Right now a separate fetch request is sent to the server for every character we type into the search input - this causes janky rendering and multiple unnecessary repaints of the ProjectList component
+
+The solution
+- Debounce the search input!
+  - use a separate piece of state to manage the search input
+  - when that piece of state changes, schedule a change to the state variable that will trigger the fetch request for 300 milliseconds in the future
+  - cancel the previously scheduled update to that state variable 
 
 <!-- slide style="text-align: left;" -->
 
@@ -259,6 +251,10 @@ When the component unmounts from the DOM or mounts for the first time, it is ens
 
 <br>
 
-Side effects are essential parts of a components functionality but not necessarily an action that needs to parttake in the rendering of the component. These are 'effects' that are going to happen after the component has rendered to the DOM. We can utilize the built in React hook `useEffect()` to indicate what actions we would like to run after our component has rendered. There are a few ways to set rules on when these effects should occur by using the dependency array which is the optional second argument provided to the `useEffect()` hook.
+- Side effects run after first render
+- Side effects run after every subsequent render where one of the values in their dependency array changes
+- Any time a side effect function refers to a value in state or props, that value should be included in its dependency array (follow the eslint hints in your editor)
+- If your side effect interacts with an external API or a native browser API like setInterval or setTimeout make sure to return a cleanup function to avoid memory leaks
+- useEffect with an empty dependency array is your go to tool for fetching data when a component first loads
 
 <br>
