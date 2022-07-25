@@ -23,6 +23,7 @@ presentation:
 
 ## Project Showcase Features
 
+- Persist projects to database upon submitting the ProjectForm
 - Load all projects from db on component load
 - Load all phase 4 projects from db when users click on the phase 4 button
 - Load all matching projects from db by phase and value in the search input
