@@ -1,0 +1,404 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1098px" height="2339px" viewBox="-0.5 -0.5 1098 2339" content="&lt;mxfile&gt;&lt;diagram id=&quot;U21zowtGrgzNkReu4E3L&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="1095" height="2334.95" fill="#000000" stroke="#000000" pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="0" y="0" width="1095" height="2334.95" fill="rgb(255, 255, 255)" stroke="#f0f0f0" pointer-events="all"/>
+        <path d="M 0 607 L 1095 607" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
+        <path d="M 0 607 L 1095 607" fill="none" stroke="#f0f0f0" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 1218 L 1095 1218" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
+        <path d="M 0 1218 L 1095 1218" fill="none" stroke="#f0f0f0" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 1828 L 1095 1828" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
+        <path d="M 0 1828 L 1095 1828" fill="none" stroke="#f0f0f0" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 0 M 1095 0 M 1095 607 M 0 607" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="0" y="0" width="1095" height="607" fill="#f9f7ed" stroke="none" pointer-events="none"/>
+        <path d="M 0 0 M 1095 0 M 1095 607 M 0 607" fill="none" stroke="#36393d" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 607 M 1095 607 M 1095 1218 M 0 1218" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="0" y="607" width="1095" height="611" fill="#f9f7ed" stroke="none" pointer-events="none"/>
+        <path d="M 0 607 M 1095 607 M 1095 1218 M 0 1218" fill="none" stroke="#36393d" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 1218 M 1095 1218 M 1095 1828 M 0 1828" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="0" y="1218" width="1095" height="610" fill="#f9f7ed" stroke="none" pointer-events="none"/>
+        <path d="M 0 1218 M 1095 1218 M 1095 1828 M 0 1828" fill="none" stroke="#36393d" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 1828 M 1095 1828 M 1095 2335 M 0 2335" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 1828 M 1095 1828 M 1095 2335 M 0 2335" fill="none" stroke="rgb(0, 0, 0)" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 371 418 L 371 461 Q 371 471 371 481 L 371 530.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 371 535.88 L 367.5 528.88 L 371 530.63 L 374.5 528.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="328" y="272" width="270" height="167" fill="#1ba1e2" stroke="#006eaf" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 256px; height: 1px; padding-top: 356px; margin-left: 335px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                App
+                                <br/>
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        State: projects, isDarkMode, projectToEdit, selectedPhase, searchQuery
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        No events
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        Callbacks: onToggleDarkMode,
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        onAddProject, onCompleteEditing,
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        onProjectEdit
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="463" y="359" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    App...
+                </text>
+            </switch>
+        </g>
+        <rect x="92" y="537" width="182" height="132" fill="#0050ef" stroke="#001dbc" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 603px; margin-left: 99px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                Header
+                                <br/>
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        State: No state
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        Events: onClick:onToggleDarkMode
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        <br/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="183" y="607" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Header...
+                </text>
+            </switch>
+        </g>
+        <rect x="277" y="537" width="188" height="132" fill="#fa6800" stroke="#c73500" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 174px; height: 1px; padding-top: 603px; margin-left: 284px;">
+                        <div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                <font color="#f0f0f0">
+                                    ProjectForm
+                                    <br/>
+                                    <br/>
+                                    <div style="text-align: left">
+                                        <span>
+                                            State: formData
+                                        </span>
+                                    </div>
+                                    <div style="text-align: left">
+                                        <span>
+                                            <br/>
+                                        </span>
+                                    </div>
+                                    <div style="text-align: left">
+                                        <span>
+                                            Events:
+                                        </span>
+                                    </div>
+                                    <div style="text-align: left">
+                                        <span>
+                                            onChange: handleChange()
+                                        </span>
+                                    </div>
+                                    <div style="text-align: left">
+                                        <span>
+                                            onSubmit: =&gt; onAddProject()
+                                        </span>
+                                    </div>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="371" y="607" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ProjectForm...
+                </text>
+            </switch>
+        </g>
+        <path d="M 793.25 583 L 793.67 688.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 793.69 693.88 L 790.16 686.9 L 793.67 688.63 L 797.16 686.87 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="704" y="456" width="178" height="127" fill="#008a00" stroke="#005700" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 176px; height: 1px; padding-top: 520px; margin-left: 705px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                ProjectList
+                                <br/>
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        State: searchQuery
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        Events:
+                                    </span>
+                                </div>
+                                <div style="text-align: left">
+                                    <span>
+                                        onChange: handleOnChange
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="793" y="523" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ProjectList...
+                </text>
+            </switch>
+        </g>
+        <rect x="707.5" y="695" width="173" height="155" fill="#60a917" stroke="#2d7600" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 171px; height: 1px; padding-top: 773px; margin-left: 709px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                ProjectListItem
+                                <br/>
+                                <br/>
+                                <div style="text-align: left">
+                                    State: clapCount
+                                </div>
+                                <div style="text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="text-align: left">
+                                    Events:
+                                </div>
+                                <div style="text-align: left">
+                                    onClick: handleClap
+                                </div>
+                                <div style="text-align: left">
+                                    onClick: =&gt; onProjectEdit()
+                                </div>
+                                <div style="text-align: left">
+                                    onClick: handleDeleteCLick
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="794" y="776" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ProjectListItem...
+                </text>
+            </switch>
+        </g>
+        <path d="M 328 355.5 L 192.94 370.87 Q 183 372 183 382 L 183 530.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 183 535.88 L 179.5 528.88 L 183 530.63 L 186.5 528.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 383px; margin-left: 182px;">
+                        <div data-drawio-colors="color: #F0F0F0; background-color: #F9F7ED; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: none; background-color: rgb(249, 247, 237); white-space: nowrap;">
+                                <font color="#ff3333" style="font-size: 12px">
+                                    isDarkMode
+                                    <br/>
+                                </font>
+                                <font color="#0000ff" style="font-size: 12px">
+                                    onToggleDarkMode
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="182" y="386" fill="#F0F0F0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    isDarkMode...
+                </text>
+            </switch>
+        </g>
+        <path d="M 598 355.5 L 783.04 371.16 Q 793 372 793 382 L 793 449.63" fill="none" stroke="#36393d" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 793 454.88 L 789.5 447.88 L 793 449.63 L 796.5 447.88 Z" fill="#36393d" stroke="#36393d" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="469" y="537" width="184" height="132" fill="#f0a30a" stroke="#bd7000" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 170px; height: 1px; padding-top: 603px; margin-left: 476px;">
+                        <div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                <font color="#f0f0f0">
+                                    ProjectEditForm
+                                    <br/>
+                                    <br/>
+                                </font>
+                                <div style="color: rgb(240 , 240 , 240) ; text-align: left">
+                                    State: formData
+                                </div>
+                                <div style="color: rgb(240 , 240 , 240) ; text-align: left">
+                                    <br/>
+                                </div>
+                                <div style="color: rgb(240 , 240 , 240) ; text-align: left">
+                                    Events:
+                                </div>
+                                <div style="color: rgb(240 , 240 , 240) ; text-align: left">
+                                    onChange: handleChange()
+                                </div>
+                                <div style="color: rgb(240 , 240 , 240) ; text-align: left">
+                                    onSubmit: =&gt; onCompleteEditing()
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="561" y="607" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ProjectEditForm...
+                </text>
+            </switch>
+        </g>
+        <path d="M 563.98 440.17 L 564 528.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 564 533.88 L 560.5 526.88 L 564 528.63 L 567.5 526.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 484px; margin-left: 564px;">
+                        <div data-drawio-colors="color: #F0F0F0; background-color: #F9F7ED; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: none; background-color: rgb(249, 247, 237); white-space: nowrap;">
+                                <font style="font-size: 12px">
+                                    <font color="#ff3333">
+                                        project
+                                        <br/>
+                                    </font>
+                                    <font color="#0000ff">
+                                        onCompleteEditing
+                                    </font>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="564" y="487" fill="#F0F0F0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    project...
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 360px; margin-left: 688px;">
+                        <div data-drawio-colors="color: #F0F0F0; background-color: #F9F7ED; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: none; background-color: rgb(249, 247, 237); white-space: nowrap;">
+                                <font style="font-size: 12px">
+                                    <font color="#ff3333">
+                                        projects
+                                        <br/>
+                                    </font>
+                                    <font color="#0000ff">
+                                        onProjectEdit
+                                    </font>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="688" y="364" fill="#F0F0F0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    projects...
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 629px; margin-left: 793px;">
+                        <div data-drawio-colors="color: #F0F0F0; background-color: #F9F7ED; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: none; background-color: rgb(249, 247, 237); white-space: nowrap;">
+                                <font style="font-size: 12px">
+                                    <font color="#ff3333">
+                                        project
+                                        <br/>
+                                    </font>
+                                    <font color="#0000ff">
+                                        onProjectEdit
+                                        <br/>
+                                    </font>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="793" y="633" fill="#F0F0F0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    project...
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 485px; margin-left: 376px;">
+                        <div data-drawio-colors="color: #F0F0F0; background-color: #F9F7ED; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: none; background-color: rgb(249, 247, 237); white-space: nowrap;">
+                                <font color="#0000ff" style="font-size: 12px">
+                                    onAddProject
+                                    <br/>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="376" y="489" fill="#F0F0F0" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    onAddProject
+                </text>
+            </switch>
+        </g>
+        <path d="M 328 344.14 L 599 343" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 328 386.23 L 598 386" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
