@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-const ProjectEditForm = ({ projectId, completeEditing }) => {
-  const initialState = {
-    name: "",
-    about: "",
-    phase: "",
-    link: "",
-    image: "",
-  };
+const ProjectEditForm = ({ projectToEdit, onCompleteEditing }) => {
+  
 
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(projectToEdit);
 
   const { name, about, phase, link, image } = formData;
 
+  // refetch the projectToEdit from the database upon load
+  // to ensure we have the most recent values for our formData
   useEffect(() => {
-    fetch(`http://localhost:4000/projects/${projectId}`)
+    fetch(`http://localhost:4000/projects/${projectToEdit.id}`)
       .then((res) => res.json())
       .then((project) => setFormData(project));
-  }, [projectId]);
+  }, [projectToEdit.id]);
 
-  const handleChange = (e) => {
+  const handleOnChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -27,7 +23,7 @@ const ProjectEditForm = ({ projectId, completeEditing }) => {
   function handleSubmit(e) {
     e.preventDefault();
     // Add code here
-    completeEditing();
+    onCompleteEditing();
   }
 
   return (
@@ -40,14 +36,14 @@ const ProjectEditForm = ({ projectId, completeEditing }) => {
         id="name"
         name="name"
         value={name}
-        onChange={handleChange}
+        onChange={handleOnChange}
       />
 
       <label htmlFor="about">About</label>
-      <textarea id="about" name="about" value={about} onChange={handleChange} />
+      <textarea id="about" name="about" value={about} onChange={handleOnChange} />
 
       <label htmlFor="phase">Phase</label>
-      <select name="phase" id="phase" value={phase} onChange={handleChange}>
+      <select name="phase" id="phase" value={phase} onChange={handleOnChange}>
         <option value="1">Phase 1</option>
         <option value="2">Phase 2</option>
         <option value="3">Phase 3</option>
@@ -61,7 +57,7 @@ const ProjectEditForm = ({ projectId, completeEditing }) => {
         id="link"
         name="link"
         value={link}
-        onChange={handleChange}
+        onChange={handleOnChange}
       />
 
       <label htmlFor="image">Screenshot</label>
@@ -70,7 +66,7 @@ const ProjectEditForm = ({ projectId, completeEditing }) => {
         id="image"
         name="image"
         value={image}
-        onChange={handleChange}
+        onChange={handleOnChange}
       />
 
       <button type="submit">Update Project</button>

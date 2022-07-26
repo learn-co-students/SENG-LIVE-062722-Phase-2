@@ -15,7 +15,7 @@
 
 - Observe the updates applied in the `App` component
 
-- Update the `useEffect` inside the `ProjectEditForm` component so that the side effect will run upon `projectId` updates
+- Update the `useEffect` inside the `ProjectEditForm` component so that the side effect will run upon `projectToEdit` updates
 
 #### 2. Submit the edit project form and make a PATCH request
 

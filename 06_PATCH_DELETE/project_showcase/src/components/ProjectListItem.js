@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
 
-const ProjectListItem = ({ project, enterProjectEditModeFor }) => {
+const ProjectListItem = ({ project, onProjectEdit }) => {
   const { id, image, about, name, link, phase } = project;
 
   const [clapCount, setClapCount] = useState(0);
@@ -9,7 +9,7 @@ const ProjectListItem = ({ project, enterProjectEditModeFor }) => {
   const handleClap = (clapCount) => setClapCount(clapCount + 1);
 
   const handleEditClick = () => {
-    enterProjectEditModeFor(id);
+    onProjectEdit(project);
   };
 
   const handleDeleteClick = () => {};

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const ProjectList = ({
   projects,
-  enterProjectEditModeFor,
+  onProjectEdit,
   setSelectedPhase,
   setSearchQuery
 }) => {
@@ -14,7 +14,7 @@ const ProjectList = ({
       <ProjectListItem
         key={project.id}
         project={project}
-        enterProjectEditModeFor={enterProjectEditModeFor}
+        onProjectEdit={onProjectEdit}
       />
     );
   });

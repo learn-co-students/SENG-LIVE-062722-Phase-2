@@ -8,7 +8,7 @@ import ProjectEditForm from "./components/ProjectEditForm";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [projects, setProjects] = useState([]);
-  const [projectId, setProjectId] = useState(null);
+  const [projectToEdit, setProjectToEdit] = useState(null);
   const [selectedPhase, setSelectedPhase] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -36,20 +36,20 @@ const App = () => {
     setProjects((projects) => [...projects, newProj]);
   };
 
-  const completeEditing = () => {
-    setProjectId(null);
+  const onCompleteEditing = () => {
+    setProjectToEdit(null);
   };
 
-  const enterProjectEditModeFor = (projectId) => {
-    setProjectId(projectId);
+  const onProjectEdit = (projectToEdit) => {
+    setProjectToEdit(projectToEdit);
   };
 
   const renderForm = () => {
-    if (projectId) {
+    if (projectToEdit) {
       return (
         <ProjectEditForm
-          projectId={projectId}
-          completeEditing={completeEditing}
+          projectToEdit={projectToEdit}
+          onCompleteEditing={onCompleteEditing}
         />
       );
     } else {
@@ -63,7 +63,7 @@ const App = () => {
       {renderForm()}
       <ProjectList
         projects={projects}
-        enterProjectEditModeFor={enterProjectEditModeFor}
+        onProjectEdit={onProjectEdit}
         setSelectedPhase={setSelectedPhase}
         setSearchQuery={setSearchQuery}
       />
