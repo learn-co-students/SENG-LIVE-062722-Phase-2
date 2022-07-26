@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const ProjectList = ({
   projects,
   onProjectEdit,
+  onProjectDelete,
   setSelectedPhase,
   setSearchQuery
 }) => {
@@ -15,6 +16,7 @@ const ProjectList = ({
         key={project.id}
         project={project}
         onProjectEdit={onProjectEdit}
+        onProjectDelete={onProjectDelete}
       />
     );
   });

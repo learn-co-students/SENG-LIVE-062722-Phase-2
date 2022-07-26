@@ -36,13 +36,31 @@ const App = () => {
     setProjects((projects) => [...projects, newProj]);
   };
 
-  const onCompleteEditing = () => {
+  const onCompleteEditing = (updatedProject) => {
+    setProjects(projects => projects.map(originalProject => {
+      if (originalProject.id === updatedProject.id) {
+        return updatedProject;
+      } else {
+        return originalProject;
+      }
+    }))
     setProjectToEdit(null);
   };
 
   const onProjectEdit = (projectToEdit) => {
     setProjectToEdit(projectToEdit);
   };
+
+  const onProjectDelete = (projectId) => {
+    console.log('deleting a project', projectId)
+    // setProjects(projects => {
+    //   return projects.filter(originalProject => {
+    //     return originalProject.id !== projectId;
+    //   })
+    // })
+    // shorter version:
+    setProjects(projects => projects.filter(p => p.id !== projectId))
+  }
 
   const renderForm = () => {
     if (projectToEdit) {
@@ -64,9 +82,10 @@ const App = () => {
       <ProjectList
         projects={projects}
         onProjectEdit={onProjectEdit}
+        onProjectDelete={onProjectDelete}
         setSelectedPhase={setSelectedPhase}
         setSearchQuery={setSearchQuery}
-      />
+        />
     </div>
   );
 };
