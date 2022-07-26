@@ -7,6 +7,11 @@
 
 ## Deliverables
 
+- Review changes to the project showcase app to prepare for editing
+- get our ProjectEditForm working to persist changes to db.json and to local state
+- get the delete button working for projects so it removes the project from db.json and local state
+- get the clap button working for projects so the number of claps persists to db.json and local state
+
 #### 1. Review changes to the project showcase application
 
 - Observe the `ProjectEditForm` component
