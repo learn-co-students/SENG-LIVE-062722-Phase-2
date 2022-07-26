@@ -249,3 +249,10 @@ select:focus {
   border: 2px solid var(--blue-dark);
   color: var(--white);
 }
+
+.card .manage {
+  display: flex;
+  justify-content: end;
+  margin: 0.5rem;
+  gap: 0.25rem;
+}
