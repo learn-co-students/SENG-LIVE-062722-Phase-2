@@ -1,6 +1,6 @@
 # Project Showcase
 
-![Inverse Data Flow](../../assets/react-inverse-data-flow-diagram.png)
+![Inverse Data Flow](../assets/component-hierarchy-with-data-flow.drawio.svg)
 
 ## UI changes to enable editing
 
