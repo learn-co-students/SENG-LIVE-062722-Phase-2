@@ -291,6 +291,11 @@ nav {
   margin: 0 0.5rem;
 }
 
+.branding {
+  display: flex;
+  align-items: center;
+}
+
 header h1 a {
   border-bottom: none;
 }
