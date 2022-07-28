@@ -1,13 +1,15 @@
 import { useState } from "react";
 
+const initialState = {
+  name: "",
+  about: "",
+  phase: "",
+  link: "",
+  image: "",
+};
+
 const ProjectForm = ({ onAddProject }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    about: "",
-    phase: "",
-    link: "",
-    image: "",
-  });
+  const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,8 +21,7 @@ const ProjectForm = ({ onAddProject }) => {
     const configObj = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({ ...formData, claps: 0 }),
     };
@@ -29,13 +30,7 @@ const ProjectForm = ({ onAddProject }) => {
       .then((resp) => resp.json())
       .then((project) => {
         onAddProject(project);
-        setFormData({
-          name: "",
-          about: "",
-          phase: "",
-          link: "",
-          image: "",
-        });
+        setFormData(initialState);
       });
   };
 

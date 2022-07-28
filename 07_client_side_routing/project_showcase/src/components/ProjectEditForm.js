@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const ProjectEditForm = ({ onUpdateProject }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    about: "",
-    phase: "",
-    link: "",
-    image: "",
-  });
+const ProjectEditForm = ({ projectToEdit, onUpdateProject }) => {
+  const [formData, setFormData] = useState(projectToEdit);
 
   const { name, about, phase, link, image } = formData;
 
@@ -16,14 +10,14 @@ const ProjectEditForm = ({ onUpdateProject }) => {
   // const history = useHistory()
 
   useEffect(() => {
-    fetch(`http://localhost:4000/projects/1`)
+    fetch(`http://localhost:4000/projects/${projectToEdit.id}`)
       .then((res) => res.json())
       .then((project) => setFormData(project));
-  }, []);
+  }, [projectToEdit.id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData(formData => ({ ...formData, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -31,13 +25,12 @@ const ProjectEditForm = ({ onUpdateProject }) => {
     const configObj = {
       method: "PATCH",
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(formData),
     };
 
-    fetch(`http://localhost:4000/projects/1`, configObj)
+    fetch(`http://localhost:4000/projects/${projectToEdit.id}`, configObj)
       .then((resp) => resp.json())
       .then((updatedProj) => {
         onUpdateProject(updatedProj);
@@ -58,10 +51,20 @@ const ProjectEditForm = ({ onUpdateProject }) => {
       />
 
       <label htmlFor="about">About</label>
-      <textarea id="about" name="about" value={about} onChange={handleChange} />
+      <textarea
+        id="about"
+        name="about"
+        value={about}
+        onChange={handleChange}
+      />
 
       <label htmlFor="phase">Phase</label>
-      <select name="phase" id="phase" value={phase} onChange={handleChange}>
+      <select
+        name="phase"
+        id="phase"
+        value={phase}
+        onChange={handleChange}
+      >
         <option value="1">Phase 1</option>
         <option value="2">Phase 2</option>
         <option value="3">Phase 3</option>

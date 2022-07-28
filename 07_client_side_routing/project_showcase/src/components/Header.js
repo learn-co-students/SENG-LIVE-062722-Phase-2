@@ -4,21 +4,19 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
 
   return (
-    <header>
+    <header className="navigation">
+      <h1 className="branding">
+        <span className="logo">{"//"}</span>
+        Project Showcase
+      </h1>
       <nav>
-        <h1 className="branding">
-          <span className="logo">{"//"}</span>
-          Project Showcase
-        </h1>
-        <div className="navigation">
-          <a className="button" href="/projects">
-            All Projects
-          </a>
-          <a className="button" href="/projects/new">
-            Add Project
-          </a>
-          <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
-        </div>
+        <a className="button" href="/projects">
+          All Projects
+        </a>
+        <a className="button" href="/projects/new">
+          Add Project
+        </a>
+        <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
       </nav>
     </header>
   );
