@@ -318,3 +318,8 @@ header h1 a:hover {
   display: block;
   margin-bottom: 2rem;
 }
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+}
