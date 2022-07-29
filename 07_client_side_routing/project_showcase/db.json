@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "name": "Code Bucket #3",
+      "name": "Code Bucket",
       "about": "Web-based CSS, JS and HTML Editor",
       "phase": 4,
       "link": "https://code-bucket.netlify.app",
