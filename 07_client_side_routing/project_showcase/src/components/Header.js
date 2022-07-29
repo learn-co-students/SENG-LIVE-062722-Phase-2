@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
@@ -6,16 +7,21 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
   return (
     <header className="navigation">
       <h1 className="branding">
-        <span className="logo">{"//"}</span>
-        Project Showcase
+        <Link to="/">
+          <span className="logo">{"//"}</span>
+          Project Showcase
+        </Link>
       </h1>
       <nav>
-        <a className="button" href="/projects">
+        <NavLink className="button" exact to="/projects">
           All Projects
-        </a>
-        <a className="button" href="/projects/new">
+        </NavLink>
+        <NavLink className="button" to="/projects/new">
           Add Project
-        </a>
+        </NavLink>
+        <NavLink className="button" to="/about">
+          About
+        </NavLink>
         <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
       </nav>
     </header>
