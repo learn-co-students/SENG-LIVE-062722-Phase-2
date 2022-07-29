@@ -51,6 +51,7 @@ What URLs do we want our application to have to simulate the feeling of differen
 | Component       | Url                |
 | --------------- | ------------------ |
 | Home            | / (root route)     |
+| About           | /about             |
 | ProjectForm     | /projects/new      |
 | ProjectEditForm | /projects/:id/edit |
 | ProjectDetail   | /projects/:id      |
@@ -118,10 +119,17 @@ return (
     <Header isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode} />
     <Switch>
       <Home />
-      <ProjectForm onAddProject={onAddProject} />
-      <ProjectEditForm onUpdateProject={onUpdateProject} />
+      <About />
+      {renderForm()}
+      <ProjectList
+        projects={projects}
+        onProjectEdit={onProjectEdit}
+        onProjectDelete={onProjectDelete}
+        setSelectedPhase={setSelectedPhase}
+        setSearchQuery={setSearchQuery}
+      />
+      <Home />
       <ProjectDetail />
-      <ProjectList projects={projects} onDeleteProject={onDeleteProject} />
     </Switch>
   </div>
 );
@@ -137,7 +145,7 @@ return (
 
 - Every component nested inside of the `Switch` component will be individually wrapped inside of a `Route` component.
 
-💥 Route will be provided a `path` prop. This is where the developer can define the URL associated with the component. That means that if the pattern of the URL matches the path defined, the component will render
+💥 Route will be provided a `path` prop. This is where the developer can define the URL associated with the component. That means that if the pattern of the URL matches the path defined, the Route will render its children. Otherwise, the Route renders null.
 
 <!-- slide style="text-align: left;" -->
 

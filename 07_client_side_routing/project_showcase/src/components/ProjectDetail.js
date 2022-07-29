@@ -14,6 +14,8 @@ const ProjectDetail = () => {
       });
   }, [id]);
 
+  if(!project) { return <div></div>}
+
   const { image, name, about, link, phase } = project;
 
   const handleClapClick = () => {
