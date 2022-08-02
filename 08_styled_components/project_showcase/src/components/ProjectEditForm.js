@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import { Input, Form, Button }  from './shared';
 
 const initialState = {
   name: "",
@@ -48,11 +49,11 @@ const ProjectEditForm = ({ onUpdateProject }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form" autoComplete="off">
+    <Form onSubmit={handleSubmit} autoComplete="off">
       <h3>Edit Project</h3>
 
       <label htmlFor="name">Name</label>
-      <input
+      <Input
         type="text"
         id="name"
         name="name"
@@ -61,7 +62,8 @@ const ProjectEditForm = ({ onUpdateProject }) => {
       />
 
       <label htmlFor="about">About</label>
-      <textarea
+      <Input
+        as="textarea"
         id="about"
         name="about"
         value={about}
@@ -69,7 +71,8 @@ const ProjectEditForm = ({ onUpdateProject }) => {
       />
 
       <label htmlFor="phase">Phase</label>
-      <select
+      <Input
+        as="select"
         name="phase"
         id="phase"
         value={phase}
@@ -80,10 +83,10 @@ const ProjectEditForm = ({ onUpdateProject }) => {
         <option value="3">Phase 3</option>
         <option value="4">Phase 4</option>
         <option value="5">Phase 5</option>
-      </select>
+      </Input>
 
       <label htmlFor="link">Project Homepage</label>
-      <input
+      <Input
         type="text"
         id="link"
         name="link"
@@ -92,7 +95,7 @@ const ProjectEditForm = ({ onUpdateProject }) => {
       />
 
       <label htmlFor="image">Screenshot</label>
-      <input
+      <Input
         type="text"
         id="image"
         name="image"
@@ -100,8 +103,8 @@ const ProjectEditForm = ({ onUpdateProject }) => {
         onChange={handleChange}
       />
 
-      <button type="submit">Update Project</button>
-    </form>
+      <Button type="submit">Update Project</Button>
+    </Form>
   );
 };
 

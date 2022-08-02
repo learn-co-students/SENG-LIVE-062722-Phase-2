@@ -1,30 +1,82 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import styled from "styled-components";
+import { Button } from "./shared";
+
+const Container = styled.header`
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  * {
+    margin: 0 0.5rem;
+  }
+
+  nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+ 
+`
+
+const Branding = styled.h1`
+  display: flex;
+
+  a {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+  }
+
+  a:hover {
+    border-bottom: none;
+    background-color: transparent;
+  }
+`;
+
+const Logo = styled.span`
+  color: ${props => props.theme.primary};
+  font-size: 1.25em;
+  font-family: Helvetica;
+  margin-right: 0.5rem;
+`
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
   const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode";
 
   return (
-    <header className="navigation">
-      <h1 className="branding">
+    <Container>
+      <Branding>
         <Link to="/">
-          <span className="logo">{"//"}</span>
+          <Logo>{"//"}</Logo>
           Project Showcase
         </Link>
-      </h1>
+      </Branding>
       <nav>
-        <NavLink className="button" exact to="/projects">
+        <Button 
+          as={NavLink} 
+          exact to="/projects"
+        >
           All Projects
-        </NavLink>
-        <NavLink className="button" to="/projects/new">
+        </Button>
+        <Button 
+          as={NavLink} 
+          to="/projects/new"
+        >
           Add Project
-        </NavLink>
-        <NavLink className="button" to="/about">
+        </Button>
+        <Button 
+          as={NavLink} 
+          to="/about"
+        >
           About
-        </NavLink>
-        <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
+        </Button>
+        <Button onClick={onToggleDarkMode}>{buttonTextContent}</Button>
       </nav>
-    </header>
+    </Container>
   );
 };
 
