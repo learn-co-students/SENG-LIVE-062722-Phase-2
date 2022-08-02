@@ -31,7 +31,11 @@
 
 
 - 
-#### 5. Add a Card component for displaying the projects in a grid
+#### 5. Add a ThemeProvider to handle toggling between Dark and Light Mode
+- 
+#### 6. Use the CreateGlobalStyle function to create globally accessible styles that can be influenced by the theme
+- 
+#### 7. Add a Card component for displaying the projects in a grid
 
 - 
 
