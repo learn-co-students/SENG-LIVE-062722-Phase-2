@@ -41,8 +41,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.color};
-    border-bottom: 1px solid ${props => props.theme.color};
+    color: var(--color);
+    border-bottom: 1px solid var(--color);
     text-decoration: none;
   }
 
