@@ -23,9 +23,9 @@ const GlobalStyle = createGlobalStyle`
     --blue-dark: #145cb3;
     --purple: #cda2ff;
     --green: #00ef7c;
-    --color: var(--white);
-    --background: var(--black);
-    --primary: var(--turquoise);
+    --color: ${props => props.theme.color};
+    --background: ${props => props.theme.backgroundColor};
+    --primary: ${props => props.theme.primary};
   }
   * {
     padding: 0;
@@ -36,8 +36,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Fira Code", monospace;
     font-size: 16px;
-    color: ${props => props.theme.color};
-    background-color: ${props => props.theme.backgroundColor};
+    color: var(--color);
+    background-color: var(--background);
   }
 
   a {

@@ -8,10 +8,10 @@ export default styled.input`
   font-size: 1.25rem;
   font-weight: bold;
   transition: all 0.3s;
-  border: 2px solid var(--color);
+  border: 4px solid var(--color);
 
   &:focus {
     outline: none;
-    border: 2px solid var(--primary);
+    border: 4px solid var(--primary);
   }
 `
